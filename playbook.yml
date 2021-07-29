@@ -7,4 +7,13 @@
       name:
         - apache2
       update_cache: yes
-  
+  - name: droit_user
+    file:
+      path: /Desktop/FORMATION/Ansible/ex1
+      owner: seb
+      group: bertho
+      mode: 0777
+  - name: file copy
+    copy:
+      src: /Desktop/FORMATION/Ansible/ex1/html/
+      dest: /var/www/html
